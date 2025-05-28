@@ -1,2 +1,4 @@
 /* css for all hypothesis test pages */
-
+.hypothesis-container {
+    margin: 30px;
+}

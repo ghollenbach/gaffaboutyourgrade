@@ -1,5 +1,5 @@
 nav {
-  background-color: aqua;
+  background-color: rgb(186, 225, 253);
   padding: 10px;
 }
 
@@ -16,12 +16,12 @@ li {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: rgb(89, 0, 255);
 }
 
 .dropbtn {
   display: inline-block;
-  color: blue;
+  color: rgb(89, 0, 255);
   padding: 14px 16px;
   cursor: pointer;
 }

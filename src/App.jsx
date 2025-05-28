@@ -8,6 +8,7 @@ function App() {
     return (
         <Router>
             <div>
+            <h1 style={{ textAlign: 'center', margin: '20px 0', color: 'rgb(89, 0, 255)' }}>Gaff About Your Grade</h1>
                 <nav>
                     <ul>
                         <li><Link to="home">Home</Link></li>
@@ -22,6 +23,7 @@ function App() {
                 <Routes>
                     <Route path="one-sample-t-test" element={<Onesamplettest />} />
                     <Route path="home" element={<Home />} />
+                    <Route path="*" element={<Home />} />
                 </Routes>
             </div>
         </Router>
