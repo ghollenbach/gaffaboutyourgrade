@@ -94,19 +94,17 @@ function Onesamplettest() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showNextButton, setShowNextButton] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
+    const [sticker, setSticker] = useState(null); // 'correct', 'incorrect', or null
 
     const handleAnswered = (isCorrect) => {
         setShowNextButton(true);
+        setSticker(isCorrect ? 'correct' : 'incorrect');
         if (isCorrect) {
-            console.log('Confetti triggered');
-            setShowConfetti(true); // Trigger confetti only if the answer is correct
-
-            // Automatically stop confetti after 5 seconds
-            setTimeout(() => {
-                setShowConfetti(false);
-                console.log('Confetti stopped');
-            }, 5000); // 5000 milliseconds = 5 seconds
+            setShowConfetti(true);
+            setTimeout(() => setShowConfetti(false), 5000);
         }
+        // Hide sticker after animation (e.g., 2s)
+        setTimeout(() => setSticker(null), 7000);
     };
 
     const handleNextQuestion = () => {
@@ -118,9 +116,20 @@ function Onesamplettest() {
     return (
         <div className="hypothesis-container">
             <h1 id="top">One Sample Mean t Test</h1>
-            <a href="#multiple-choice">Go to Multiple Choice Practice</a>
+            <button
+                className="quiz-btn"
+                onClick={() => document.getElementById('multiple-choice').scrollIntoView({ behavior: 'smooth' })}
+                style={{ marginRight: '10px' }}
+            >
+                Go to Multiple Choice Practice
+            </button>
+            <button
+                className="quiz-btn"
+                onClick={() => document.getElementById('free-response').scrollIntoView({ behavior: 'smooth' })}
+            >
+                Go to Free Response Practice
+            </button>
             <br />
-            <a href="#free-response">Go to Free Response Practice</a>
 
             <h2 id="notes">Notes</h2>
             <p>Notes go here</p>
@@ -142,6 +151,16 @@ function Onesamplettest() {
                 )}
                 {currentQuestionIndex < questions.length ? (
                     <>
+                        <div className="progress-bar-container">
+                        <div
+                            className="progress-bar"
+                            style={{ width: `${(currentQuestionIndex / questions.length) * 100}%` }}
+                        />
+                        </div>
+                        <p className="progress-text">
+                        Question {currentQuestionIndex + 1} of {questions.length}
+                        </p>
+
                         <MCQ
                             question={questions[currentQuestionIndex].question}
                             options={questions[currentQuestionIndex].options}
@@ -152,15 +171,7 @@ function Onesamplettest() {
                         {showNextButton && (
                             <button
                                 onClick={handleNextQuestion}
-                                style={{
-                                    marginTop: '10px',
-                                    padding: '10px 20px',
-                                    backgroundColor: '#007BFF',
-                                    color: 'white',
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    cursor: 'pointer',
-                                }}
+                                className="quiz-btn"
                             >
                                 Next
                             </button>
@@ -168,6 +179,21 @@ function Onesamplettest() {
                     </>
                 ) : (
                     <p>You've completed all the questions!</p>
+                )}
+                {sticker && (
+                    <img
+                        src={sticker === 'correct' ? '/correct.png' : '/incorrect.png'}
+                        alt={sticker === 'correct' ? 'Correct!' : 'Incorrect!'}
+                        className="sticker-spin"
+                        style={{
+                            position: 'absolute',
+                            left: '50%',
+                            top: '25%',
+                            transform: 'translate(-50%, -50%)',
+                            zIndex: 2000,
+                            pointerEvents: 'none'
+                        }}
+                    />
                 )}
             </div>
         </div>

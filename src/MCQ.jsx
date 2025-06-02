@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './MCQ.css'; 
 
 function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
     const [selected, setSelected] = useState(null);
@@ -36,7 +37,7 @@ function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
                         onClick={() => handleClick(index)}
                         style={{
                             cursor: 'pointer',
-                            backgroundColor: selected === index ? 'lightblue' : '',
+                            backgroundColor: selected === index ? '#c8bbe0' : '',
                             padding: '10px',
                             margin: '10px 0', // Ensures spacing between items
                             border: '1px solid #ccc',
@@ -51,15 +52,7 @@ function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
             {!answered && (
                 <button
                     onClick={handleNext}
-                    style={{
-                        marginTop: '10px',
-                        padding: '10px 20px',
-                        backgroundColor: '#007BFF',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                    }}
+                    className="quiz-btn"
                 >
                     Submit
                 </button>
