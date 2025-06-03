@@ -55,7 +55,7 @@
 
 .sticker-spin {
   animation: spin-in 3s cubic-bezier(0.23, 1, 0.32, 1) forwards, 
-             sticker-hold 4s 3s forwards;
+             sticker-hold 2s 3s forwards;
   width: 250px;
   height: 250px;
   /* Ensures the final state is held */

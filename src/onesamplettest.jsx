@@ -95,16 +95,18 @@ function Onesamplettest() {
     const [showNextButton, setShowNextButton] = useState(false);
     const [showConfetti, setShowConfetti] = useState(false);
     const [sticker, setSticker] = useState(null); // 'correct', 'incorrect', or null
+    const [correctCount, setCorrectCount] = useState(0);
 
     const handleAnswered = (isCorrect) => {
         setShowNextButton(true);
         setSticker(isCorrect ? 'correct' : 'incorrect');
         if (isCorrect) {
             setShowConfetti(true);
+            setCorrectCount((prev) => prev + 1);
             setTimeout(() => setShowConfetti(false), 5000);
         }
         // Hide sticker after animation (e.g., 2s)
-        setTimeout(() => setSticker(null), 7000);
+        setTimeout(() => setSticker(null), 5000);
     };
 
     const handleNextQuestion = () => {
@@ -134,6 +136,9 @@ function Onesamplettest() {
             <h2 id="notes">Notes</h2>
             <p>Notes go here</p>
 
+            <h2 id="calculator">Calculator Commands</h2>
+            <p>Commands go here</p>            
+
             <h2 id="free-response">Free Response Practice</h2>
             <p>Free response questions go here</p>
 
@@ -144,7 +149,7 @@ function Onesamplettest() {
                         {console.log('Confetti is being rendered')}
                         <Confetti
                             width={window.innerWidth}
-                            height={300} // Confetti height limited to the question area
+                            height={300}
                             style={{ position: 'absolute', top: 0 }}
                         />
                     </>
@@ -178,7 +183,45 @@ function Onesamplettest() {
                         )}
                     </>
                 ) : (
-                    <p>You've completed all the questions!</p>
+                    <div>
+                        <button
+                            className="quiz-btn"
+                            style={{ marginLeft: '10px' }}
+                            onClick={() => {
+                                setCurrentQuestionIndex(0);
+                                setCorrectCount(0);
+                                setShowNextButton(false);
+                                setShowConfetti(false);
+                                setSticker(null);
+                            }}
+                        >
+                            Reset Quiz
+                        </button>   
+                        <p>You got {correctCount} out of 8 correct.</p>
+                        {correctCount >= 6 ? (
+                            <div className="congrats-message">
+                                <h2>Congratulations!</h2>
+                                <p>You did great! 🎉</p>
+                                <img
+                                    src="/correct.png"
+                                    alt="Logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '16px' }}
+                                />
+                            </div>
+                        ) : (
+                            <div className="try-again-message">
+                                <h2>Keep Trying!</h2>
+                                <p>Review the material and try again. You can do it! 💪</p>
+                                <img
+                                    src="/incorrect.png"
+                                    alt="Logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '16px' }}
+                                />
+                            </div>
+                            
+                        )}
+                    </div>
+
                 )}
                 {sticker && (
                     <img
