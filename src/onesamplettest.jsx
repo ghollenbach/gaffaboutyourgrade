@@ -106,7 +106,7 @@ function Onesamplettest() {
             setTimeout(() => setShowConfetti(false), 5000);
         }
         // Hide sticker after animation (e.g., 2s)
-        setTimeout(() => setSticker(null), 5000);
+        setTimeout(() => setSticker(null), 4000);
     };
 
     const handleNextQuestion = () => {

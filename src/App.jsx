@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Onesamplettest from './onesamplettest';
 import Home from './home';
+import Footer from './footer';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="home" element={<Home />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
+                <Footer />
             </div>
         </Router>
     );
