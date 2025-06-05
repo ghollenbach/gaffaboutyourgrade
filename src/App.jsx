@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Onesamplettest from './onesamplettest';
 import Home from './home';
 import Footer from './footer';
+import Onesampleztest from './onesampleztest';
 
 function App() {
     return (
@@ -23,13 +24,16 @@ function App() {
                         <li className="dropdown">
                             <span className="dropbtn">Hypothesis Tests</span>
                             <div className="dropdown-content">
-                                <li><Link to="one-sample-t-test">One Sample Mean t Test</Link></li>
+                                <Link to="one-sample-t-test">One Sample Mean T Test</Link>
+                                <Link to="one-sample-z-test">One Sample Proportion Z Test</Link>
                             </div>
                         </li>
                     </ul>
                 </nav>
                 <Routes>
                     <Route path="one-sample-t-test" element={<Onesamplettest />} />
+                    <Route path="one-sample-z-test" element={<Onesampleztest />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="*" element={<Home />} />
                 </Routes>

@@ -36,7 +36,8 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-a:hover {
+/* Only highlight top-level nav links, not dropdown links */
+nav > ul > li > a:not(.dropbtn):hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -49,23 +50,40 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
+  left: 0;
+  flex-direction: column;
   background-color: #c8bbe0;
-  border-radius: 12px;              
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 10px;
-  z-index: 1000;                   
-  min-width: 160px;
+  padding: 4px 0;
+  z-index: 1000;
+  width: max-content;
+  min-width: unset;
 }
 
+.dropdown-content a {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Only highlight dropdown links on hover */
 .dropdown-content a:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .dropdown:hover .dropdown-content {
-  display:block;
+  display: block;
 }
 
 .dropdown:hover .dropbtn {
