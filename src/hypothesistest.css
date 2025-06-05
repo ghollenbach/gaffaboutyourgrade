@@ -16,6 +16,9 @@
     color: #331879;
 }
 
+.hypothesis-container h4 {
+    text-decoration: underline;
+}
 
 .progress-bar-container {
   width: 100%;
