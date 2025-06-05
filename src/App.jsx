@@ -24,8 +24,8 @@ function App() {
                         <li className="dropdown">
                             <span className="dropbtn">Hypothesis Tests</span>
                             <div className="dropdown-content">
-                                <Link to="one-sample-t-test">One Sample Mean T Test</Link>
-                                <Link to="one-sample-z-test">One Sample Proportion Z Test</Link>
+                                <Link to="one-sample-t-test">1-Sample Mean T-Test</Link>
+                                <Link to="one-sample-z-test">1-Sample Proportion Z-Test</Link>
                             </div>
                         </li>
                     </ul>

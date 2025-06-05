@@ -119,7 +119,7 @@ function Onesamplettest() {
 
     return (
         <div className="hypothesis-container">
-            <h1 id="top">One Sample Mean T Test</h1>
+            <h1 id="top">1-Sample Mean T-Test</h1>
             <button
                 className="quiz-btn"
                 onClick={() => document.getElementById('multiple-choice').scrollIntoView({ behavior: 'smooth' })}

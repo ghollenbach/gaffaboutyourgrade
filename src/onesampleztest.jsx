@@ -124,7 +124,7 @@ function Onesampleztest() {
 
     return (
         <div className="hypothesis-container">
-            <h1 id="top">One Sample Proportion Z-Test</h1>
+            <h1 id="top">1-Sample Proportion Z-Test</h1>
             <button
                 className="quiz-btn"
                 onClick={() => document.getElementById('multiple-choice').scrollIntoView({ behavior: 'smooth' })}
