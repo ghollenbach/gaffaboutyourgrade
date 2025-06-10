@@ -110,6 +110,8 @@ function Onesampleztest() {
         if (isCorrect) {
             setShowConfetti(true);
             setCorrectCount((prev) => prev + 1);
+            const audio = new Audio('/correct.mp3');
+            audio.play();
             setTimeout(() => setShowConfetti(false), 5000);
         }
         // Hide sticker after animation (e.g., 2s)
