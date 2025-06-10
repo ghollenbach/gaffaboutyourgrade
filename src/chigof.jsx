@@ -162,7 +162,7 @@ function Chigof() {
             <ol>
               <li><strong>Randomness:</strong> The data must come from a random sample of the population.</li>
               <li><strong>Sample Size: Expected Counts ≥ 5:</strong> All expected frequencies (E) must be at least 5. If even one expected count is below 5, the test is not valid.</li>
-              <li><strong>Population Size: <InlineMath math={'10n \\leq \\text{pop}'} />:</strong> The population must be at least 10× the sample size (n). This ensures independence when sampling without replacement.</li>
+              <li><strong>Population Size: <InlineMath math={'10n \\leq \\text{pop}'} />:</strong> The population must be at least 10x the sample size (n). This ensures independence when sampling without replacement.</li>
             </ol>
             <p>If all 3 assumptions are met, you can proceed with the test.</p>
 
