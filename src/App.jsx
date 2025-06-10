@@ -1,10 +1,12 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Onesamplettest from './onesamplettest';
 import Home from './home';
 import Footer from './footer';
+import Onesamplettest from './onesamplettest';
 import Onesampleztest from './onesampleztest';
+import Chigof from './chigof';
+import Chihomo from './chihomo';
 
 function App() {
     return (
@@ -26,6 +28,8 @@ function App() {
                             <div className="dropdown-content">
                                 <Link to="one-sample-t-test">1-Sample Mean T-Test</Link>
                                 <Link to="one-sample-z-test">1-Sample Proportion Z-Test</Link>
+                                <Link to="chigof">Chi-Squared Goodness of Fit Test</Link>
+                                <Link to="chihomo">Chi-Squared Homogeneity Test</Link>
                             </div>
                         </li>
                     </ul>
@@ -33,6 +37,8 @@ function App() {
                 <Routes>
                     <Route path="one-sample-t-test" element={<Onesamplettest />} />
                     <Route path="one-sample-z-test" element={<Onesampleztest />} />
+                    <Route path="chigof" element={<Chigof />} />
+                    <Route path="chihomo" element={<Chihomo />} />
                     <Route path="/" element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="*" element={<Home />} />

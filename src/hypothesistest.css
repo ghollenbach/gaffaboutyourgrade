@@ -1,6 +1,6 @@
 /* css for all hypothesis test pages */
 .hypothesis-container {
-    margin: 30px;
+    margin: 32px 100px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -92,4 +92,12 @@
     opacity: 1;
     transform: translateX(-50%) scale(1.2) rotate(0deg);
   }
+}
+
+strong + p {
+  margin-top: 0.2em;
+}
+
+p + ul {
+  margin-top: 0.2em;
 }
