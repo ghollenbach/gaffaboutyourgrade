@@ -124,7 +124,7 @@ function chihomo() {
 
     return (
         <div className="hypothesis-container">
-            <h1 id="top">Chi-Squared Test fo Homogeneity</h1>
+            <h1 id="top">Chi-Squared Test for Homogeneity</h1>
             <button
                 className="quiz-btn"
                 onClick={() => document.getElementById('multiple-choice').scrollIntoView({ behavior: 'smooth' })}
