@@ -114,6 +114,9 @@ function Chigof() {
             audio.play();
             setTimeout(() => setShowConfetti(false), 5000);
 
+        } else {
+            const audio = new Audio('/incorrect.mp3');
+            audio.play();
         }
         // Hide sticker after animation (e.g., 2s)
         setTimeout(() => setSticker(null), 4000);
