@@ -229,6 +229,13 @@ function Onesamplettest() {
               From this, we can say that if the sample size is large enough, we can assume approximate normality. How large is large enough? It's arbitrary, but we say if the sample size is <strong>greater than or equal to 30</strong>, then the CLT can be applied.
             </p>
 
+            <h4>NPP:</h4>
+            <p>A normal probability plot, or an NPP, is a graphical method of assessing whether a dataset is approximately normally distributed. </p>
+            <p>An NPP compares observed values in the data set to values you'd expect if the distribution was perfectly normally distributed. <strong>Approximate linearity on an NPP suggests approximate normality of a sampling distribution of sample means. </strong> Systematic curves or bends suggests non-normality. (Tip: on a FOK, even if the NPP doesn't look roughly linear, assume it is and proceed with the hypothesis test to not lose major points!)</p>
+            <p>For directions on how to construct an NPP on your TI-84, visit the Calculator Commands section. Here is what an NPP may look like on your TI-84:</p>
+            <img src="/npp.png" alt="Description" style={{ width: '200px' }} />
+            <p>Only use this for t-tests, not for proportions nor chi-squared tests.</p>
+
             <h4>Assumptions:</h4>
             <p>
               A little Gaffney mnemonic… <strong>RNI!</strong> Randomness, normality, and independence. Let's look at how to check each.
@@ -239,7 +246,7 @@ function Onesamplettest() {
                 <em>pro-Gaffney tip: Don't forget to say the population of interest, that's a whole point. And always put it in context!</em>
               </li>
               <li>
-                <strong>Normality:</strong> Either the population is normally distributed, or the CLT applies.
+                <strong>Normality:</strong> Either the population is normally distributed, the CLT applies, or we create an NPP.
               </li>
               <li>
                 <strong>Independence:</strong> 10% condition. As long as the population size is greater than or equal to 10 times the sample size, we can use the formula for standard deviation and proceed with the hypothesis test.
@@ -248,18 +255,42 @@ function Onesamplettest() {
 
             <h4 id="calculator">Calculator Commands:</h4>
             <p>
-              <strong>tcdf(lower bound, upper bound, d.f.):</strong> This is used to find the percentage of time that a variable will fall into a given region on the t-distribution (similar to normcdf(...)!). Use it to convert a t-statistic to a p-value.
+              <strong>tcdf(lower bound, upper bound, d.f.):</strong> This is used to find the percentage of time that a variable will fall into a given region on the t-distribution (similar to normcdf(...)!). Use it to convert a t-statistic to a p-value.<br /> </p>
+            <p>
+              <strong>Constructing an NPP: </strong><br />
+              Stat → 1: Edit <br />
+              Type your data into L1 <br />
+              2nd → y= <br />
+              Plot 1 → Enter <br />
+              Turn the plot ON <br />
+              Select the final icon <br />
+              Set XList to L1 <br />
+              Zoom → 9: ZoomStat <br />
+
             </p>
 
             <h2 id="free-response">Free Response Practice</h2>
             <p>
               Okay, that was a lot… Let's see an example with explanations, along with what to include in this type of hypothesis test!
             </p>
+            <strong>Problem 1</strong>
             <p>
               A nutritionist claims that a certain brand of granola bars contains an average of 200 calories per bar. Grace Hollenbach, however, is a very skeptical student; she thinks the true mean is less than 200 calories. She randomly selects 12 granola bars and finds that the mean number of calories is 194.8 with a sample standard deviation of 6.5 calories. The population distribution of calories in the brand of granola bars is normal. Does the data provide convincing evidence that the mean number of calories is less than 200?
             </p>
             <p>
               <a href="https://drive.google.com/file/d/13t8U3gK9WcA2jtY8W-Kz0pDkFmxL6_zU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Link to solution: 1-Sample Mean t-Test Example FRQ.pdf
+              </a>
+            </p>
+
+            <strong>Problem 2</strong>
+            <p>A shoe company claims that their new running shoe improves average mile time to under 8 minutes. A coach is skeptical and tests the shoes on 10 runners. <br />
+              The mile times (in minutes) are: <strong>7.9, 8.2, 7.8, 8.0, 7.5, 8.1, 7.6, 8.3, 7.7, 7.8 </strong><br />
+              Is there evidence at the 0.05 significance level that the average mile time is less than 8 minutes?
+            </p>
+
+            <p>
+              <a href="https://drive.google.com/file/d/1FW_0XoYYoCwKP6AbU8p9W6cxl8iB_jhB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Link to solution: 1-Sample Mean t-Test Example FRQ.pdf
               </a>
             </p>

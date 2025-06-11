@@ -221,6 +221,7 @@ function Onesampleztest() {
             <p>
               Let's look at an example FRQ problem!
             </p>
+            <strong>Problem 1</strong>
             <p>
               A national survey claims that 70% of teenagers regularly eat breakfast before school. Ms. Gaffney wonders if the proportion is different at Montgomery Blair High School. She randomly surveys 80 students at Blair and finds that 50 of them say they eat breakfast before school. Does the data provide convincing evidence to reject the national survey’s claim? Use a significance level of 0.05.
             </p>
@@ -229,6 +230,14 @@ function Onesampleztest() {
                 Link to solution: 1-Sample Proportion Z-Test.pdf
               </a>
             </p>
+
+            <strong>Problem 2</strong>
+            <p>MyMCPS Classroom claims that at least 70% of its users are satisfied with the new online design. In a random sample of 150 users, 96 said they were satisfied. At the 0.05 level of significance, is there evidence that fewer than 70% of users are satisfied?</p>
+            <p>
+              <a href="https://drive.google.com/file/d/1UZDa5cV6llmvUx1sljwm1uz4emrUwJYG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Link to solution: 1-Sample Proportion Z-Test.pdf
+              </a>
+            </p>           
 
             <h2 id="multiple-choice">Multiple Choice Practice</h2>
             <div style={{ position: 'relative' }}>
