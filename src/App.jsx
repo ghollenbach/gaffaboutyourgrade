@@ -8,6 +8,7 @@ import Onesampleztest from './onesampleztest';
 import Chigof from './chigof';
 import Chihomo from './chihomo';
 import Chiindepedence from './chiindepedence';
+import Twosampleztest from './twosamplettest';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                                 <Link to="chigof">Chi-Squared Goodness of Fit Test</Link>
                                 <Link to="chihomo">Chi-Squared Homogeneity Test</Link>
                                 <Link to="chiindepedence">Chi-Squared Independence Test</Link>
+                                <Link to="twosampleztest">2-Sample Proportion Z-Test</Link>
                             </div>
                         </li>
                     </ul>
@@ -42,6 +44,7 @@ function App() {
                     <Route path="chigof" element={<Chigof />} />
                     <Route path="chihomo" element={<Chihomo />} />
                     <Route path="chiindepedence" element={<Chiindepedence />} />
+                    <Route path="twosampleztest" element={<Twosampleztest />} />
                     <Route path="/" element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="*" element={<Home />} />
