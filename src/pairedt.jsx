@@ -317,7 +317,7 @@ Sarah     60            76           -16
                 <tr><td>24.3</td><td>23.9</td><td>0.4</td></tr>
                 <tr><td>25.2</td><td>24.3</td><td>0.9</td></tr>
             </tbody>
-</table>
+            </table>
 
                         <p>
             <a href="https://drive.google.com/file/d/1JKGxtlftQzyIPdye8fxZ9vA1FdS-FUaK/view?usp=sharing" target="_blank" rel="noopener noreferrer">

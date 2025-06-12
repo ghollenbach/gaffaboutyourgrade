@@ -12,6 +12,7 @@ function Home() {
                 from the Blair Magnet Class of 2026. Freshly escaped from the statistical clutches of Ms. Gaffney's Applied Statistics class, we've joined up together to create your ultimate hypothesis testing haven. We know firsthand the chaos that ensues when z-scores and p-values start flying, so we hope this site helps you survive—nay, thrive—as you conquer your FOKs with confidence and minimal tears!
 
             </p>
+            <h2>Also, make sure to turn up the volume!</h2>
             <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
                 <button
                     className="quiz-btn"
