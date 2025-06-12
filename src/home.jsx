@@ -6,41 +6,44 @@ function Home() {
 
     return (
         <div className="home-container">
-            <h1>Welcome!</h1>
-            <p>
-                Gaff About Your Grade is a site made by students, for students. Practice hypothesis testing, review key concepts, and boost your stats confidence. Get an A on that FOK!
+            <h1>Salutations!</h1>
+            <h2>We're Grace H, Anuva, Sarah, and Grace D</h2>
+            <p>  
+                from the Blair Magnet Class of 2026. Freshly escaped from the statistical clutches of Ms. Gaffney's Applied Statistics class, we've joined up together to create your ultimate hypothesis testing haven. We know firsthand the chaos that ensues when z-scores and p-values start flying, so we hope this site helps you survive—nay, thrive—as you conquer your FOKs with confidence and minimal tears!
+
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
                 <button
                     className="quiz-btn"
                     onClick={() => navigate('/one-sample-t-test')}
                 >
-                    Start Practicing
+                    Begin Your Statistical Quest <span className="rocket">🚀</span>
                 </button>
             </div>
             <h2>What is hypothesis testing?</h2>
             <p>
-                Hypothesis testing helps us decide whether the patterns we see in data are real or just due to chance.
+                If you've ever stared at a problem and thought, "What is does this even mean?" (like Grace D.)—don't worry. We got you. We'll break down all the tests (z, t, chi-squared, lin reg—you name it) so even your AP season brain can follow along.
             </p>
             <p>Our site offers</p>
             <ul>
-                <li>Multiple choice and free response questions</li>
-                <li>Instant feedback and explanations</li>
-                <li>Fun animations to keep you going!</li>
+                <li>🔥 Multiple choice & free response questions to test you</li>
+                <li>🎉 A Gaffney animation to keep you locked in</li>
+                <li>⚡ Instant feedback and full explanations to help you get every last point</li>
             </ul>
-            <h2>Testimonials</h2>
-            <div className="testimonial">
-                <blockquote>
-                    "The animations excite me"
-                </blockquote>
-                <p className="testimonial-author">— Ethan Hua, Applied Stats Student</p>
-                <blockquote>
-                    "It is good"
-                </blockquote>
-                <p className="testimonial-author">— Justin Rosentover, Applied Stats Student</p>
+
+            <h2>A little more about us</h2>
+            <div className="bio-columns">
+                <div className="bio">
+                    <h3>Anuva and Grace H.</h3>
+                    <img src="/bios2.png" alt="Anuva and Grace H." className="bio-img" />
+                    <p>We really run the show. This is domination—with 95% confidence.</p>
+                </div>
+                <div className="bio">
+                    <h3>Sarah and Grace D.</h3>
+                    <img src="/bio1.png" alt="Sarah and Grace D." className="bio-img" />
+                    <p>They call us… the jesters. Why, you may ask? Because we ignite the flame within the pack 😈🔥.</p>
+                </div>
             </div>
-            <h2>About us</h2>
-            <p>Bios go here</p>
 
             <h2>Contact Us</h2>
             <p>
@@ -63,6 +66,8 @@ function Home() {
                     ghollen7002@gmail.com
                 </a>
             </p>
+
+
         </div>
     )
 }

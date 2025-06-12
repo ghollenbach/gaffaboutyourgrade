@@ -8,7 +8,10 @@ import Onesampleztest from './onesampleztest';
 import Chigof from './chigof';
 import Chihomo from './chihomo';
 import Chiindepedence from './chiindepedence';
-import Twosampleztest from './twosamplettest';
+import Twosamplettest from './twosamplettest';
+import Twoproportionztest from './twoproportionztest';
+import Pairedt from './pairedt';
+import Linregttest from './linregttest';
 
 function App() {
     return (
@@ -33,7 +36,10 @@ function App() {
                                 <Link to="chigof">Chi-Squared Goodness of Fit Test</Link>
                                 <Link to="chihomo">Chi-Squared Homogeneity Test</Link>
                                 <Link to="chiindepedence">Chi-Squared Independence Test</Link>
-                                <Link to="twosampleztest">2-Sample Proportion Z-Test</Link>
+                                <Link to="twosamplettest">2-Sample Mean T-Test</Link>
+                                <Link to="twoproportionztest">2-Sample Proportion Z-Test</Link>
+                                <Link to="pairedt">Paired T-Test</Link>
+                                <Link to="linregttest">Linear Regression T-Test</Link>
                             </div>
                         </li>
                     </ul>
@@ -44,10 +50,13 @@ function App() {
                     <Route path="chigof" element={<Chigof />} />
                     <Route path="chihomo" element={<Chihomo />} />
                     <Route path="chiindepedence" element={<Chiindepedence />} />
-                    <Route path="twosampleztest" element={<Twosampleztest />} />
+                    <Route path="twosamplettest" element={<Twosamplettest />} />
                     <Route path="/" element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="*" element={<Home />} />
+                    <Route path="twoproportionztest" element={<Twoproportionztest />} />
+                    <Route path="pairedt" element={<Pairedt />} />
+                    <Route path="linregttest" element={<Linregttest />} />
                 </Routes>
                 <Footer />
             </div>

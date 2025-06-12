@@ -27,9 +27,18 @@ function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
         onAnswered(isCorrect); // Pass whether the answer is correct to the parent
     };
 
+    // Helper: use <pre> only for table-like questions
+    const isTableLike = typeof question === 'string' && (
+        question.match(/  +/) || question.includes('\n')
+    );
+
     return (
         <div className="mcq">
-            <h3>{question}</h3>
+            {isTableLike ? (
+                <pre style={{ fontFamily: 'monospace', fontSize: '1.2em', whiteSpace: 'pre-wrap' }}>{question}</pre>
+            ) : (
+                <div style={{ whiteSpace: 'pre-wrap' }}>{question}</div>
+            )}
             <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
                 {options.map((option, index) => (
                     <li
@@ -39,10 +48,10 @@ function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
                             cursor: 'pointer',
                             backgroundColor: selected === index ? '#c8bbe0' : '',
                             padding: '10px',
-                            margin: '10px 0', // Ensures spacing between items
+                            margin: '10px 0',
                             border: '1px solid #ccc',
                             borderRadius: '4px',
-                            display: 'block', // Ensures vertical stacking
+                            display: 'block',
                         }}
                     >
                         {option}
@@ -65,9 +74,9 @@ function MCQ({ question, options, correctIndex, explanation, onAnswered }) {
                             : '❌ Incorrect. Try again next time!'}
                     </p>
                     {showExplanation && (
-                        <p style={{ marginTop: '10px', color: '#555' }}>
+                        <div style={{ marginTop: '10px', color: '#555' }}>
                             <strong>Explanation:</strong> {explanation}
-                        </p>
+                        </div>
                     )}
                 </div>
             )}

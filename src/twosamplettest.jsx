@@ -6,7 +6,7 @@ import Confetti from 'react-confetti';
 import 'katex/dist/katex.min.css';
 import { InlineMath } from 'react-katex';
 
-function Twosampleztest() {
+function Twosamplettest() {
   const questions = [
     {
       question: "Questions 1-4 pertain to the following prompt: The average size of a person named Sarah is 89kgs. The average size of a person named Grace is 80kgs. The data was obtained from two samples with standard deviations 15 and 28, respectively, and sample sizes 10 and 12, respectively. If working by hand, what are the degrees of freedom?",
@@ -115,7 +115,7 @@ function Twosampleztest() {
 
     return (
         <div className="hypothesis-container">
-            <h1 id="top">2-Sample Proportion Z-Test</h1>
+            <h1 id="top">2-Sample Mean T-Test</h1>
             <button
                 className="quiz-btn"
                 onClick={() => document.getElementById('multiple-choice').scrollIntoView({ behavior: 'smooth' })}
@@ -224,7 +224,7 @@ function Twosampleztest() {
             <p>Does the data provide convincing evidence that the mean score is different between the two groups? Use a significance level of α=0.05.</p>
             <p>
               <a href="https://drive.google.com/file/d/13iqgclzNqiJxoORMEmhbRPu-8hJ_UQVG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Link to solution: 1-Sample Proportion Z-Test.pdf
+                Link to solution
               </a>
             </p>
 
@@ -237,7 +237,7 @@ function Twosampleztest() {
             <p>Does the data provide evidence at the 0.01 significance level that teenage boys consume more iron on average than teenage girls?</p>
             <p>
               <a href="https://drive.google.com/file/d/11M2uKEAbKOjZgHgsC9ktYx8qWbNMjpsH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Link to solution: 1-Sample Proportion Z-Test.pdf
+                Link to solution
               </a>
             </p>           
 
@@ -342,4 +342,4 @@ function Twosampleztest() {
     );
 }
 
-export default Twosampleztest;
+export default Twosamplettest;
