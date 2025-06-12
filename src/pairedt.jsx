@@ -286,8 +286,8 @@ Sarah     60            76           -16
             </table>
 
             <p>
-              <a href="https://drive.google.com/file/d/13iqgclzNqiJxoORMEmhbRPu-8hJ_UQVG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Link to solution: 1-Sample Proportion Z-Test.pdf
+              <a href="https://drive.google.com/file/d/1JKGxtlftQzyIPdye8fxZ9vA1FdS-FUaK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Link to both solutions
               </a>
             </p>      
 
@@ -318,6 +318,12 @@ Sarah     60            76           -16
                 <tr><td>25.2</td><td>24.3</td><td>0.9</td></tr>
             </tbody>
 </table>
+
+                        <p>
+            <a href="https://drive.google.com/file/d/1JKGxtlftQzyIPdye8fxZ9vA1FdS-FUaK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Link to both solutions
+              </a>
+            </p>  
             <h2 id="multiple-choice">Multiple Choice Practice</h2>
             <div style={{ position: 'relative' }}>
                 {showConfetti && (

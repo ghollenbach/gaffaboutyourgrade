@@ -237,7 +237,7 @@ function Twosamplettest() {
             <p>Does the data provide evidence at the 0.01 significance level that teenage boys consume more iron on average than teenage girls?</p>
             <p>
               <a href="https://drive.google.com/file/d/11M2uKEAbKOjZgHgsC9ktYx8qWbNMjpsH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Link to solution
+                Link to solutions
               </a>
             </p>           
 
